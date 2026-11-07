@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>Chatfolio</h1>
+  <div id="site-status" class="status">checking…</div>
+
+  <label for="format">Format</label>
+  <select id="format">
+    <option value="markdown">Markdown</option>
+    <option value="html">HTML</option>
+    <option value="json">JSON</option>
+    <option value="text">Plain text</option>
+    <!-- TODO: PDF / image / docx / notion -->
+  </select>
+
+  <button id="export-btn">Export current chat</button>
+  <button id="copy-btn" class="secondary">Copy to clipboard</button>
+  <div id="result" class="status"></div>
+
+  <footer>
+    <a href="#" id="open-options">Settings</a>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

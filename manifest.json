@@ -1,0 +1,82 @@
+{
+  "manifest_version": 3,
+  "name": "Chatfolio",
+  "version": "0.1.0",
+  "description": "Export AI chat conversations to markdown/html/json. Personal, extensible skeleton.",
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Chatfolio"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["vendor/katex/*"],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://chat.deepseek.com/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": [
+        "content/core/namespace.js",
+        "content/core/dom.js",
+        "content/core/convert.js",
+        "content/core/export.js",
+        "content/core/download.js",
+        "content/core/ui.js",
+        "vendor/katex/katex.min.js",
+        "content/adapters/chatgpt.js",
+        "content/main.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": [
+        "content/core/namespace.js",
+        "content/core/dom.js",
+        "content/core/convert.js",
+        "content/core/export.js",
+        "content/core/download.js",
+        "content/core/ui.js",
+        "vendor/katex/katex.min.js",
+        "content/adapters/claude.js",
+        "content/main.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://chat.deepseek.com/*"],
+      "js": [
+        "content/core/namespace.js",
+        "content/core/dom.js",
+        "content/core/convert.js",
+        "content/core/export.js",
+        "content/core/download.js",
+        "content/core/ui.js",
+        "vendor/katex/katex.min.js",
+        "content/adapters/deepseek.js",
+        "content/main.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

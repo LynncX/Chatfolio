@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chatfolio — Brand Kit</title>
+<style>
+  :root{
+    --blue:#1A73E8; --blue-deep:#0B4FC4; --blue-light:#3D8BFF;
+    --ink:#12253E; --muted:#62748C; --line:#E3EBF5; --bg:#F7FAFF;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+       -webkit-font-smoothing:antialiased;line-height:1.55}
+  .wrap{max-width:1040px;margin:0 auto;padding:56px 32px 96px}
+  header{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+  header img{width:300px;height:auto;display:block}
+  .ver{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+       border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px}
+  .lede{color:var(--muted);max-width:660px;margin:0 0 44px;font-size:15px}
+  section{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 30px;margin-bottom:22px;
+          box-shadow:0 1px 2px rgba(18,37,62,.03)}
+  h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+     margin:0 0 22px;font-weight:700}
+  .row{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+  .tile{flex:1;min-width:260px;border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;
+        align-items:center;justify-content:center;min-height:170px}
+  .tile.dark{background:#0D1117;border-color:#0D1117}
+  .tile img{display:block;max-width:100%}
+  .hero{width:190px;height:190px}
+  .lockup{width:330px}
+  .mono{width:120px;height:120px}
+  .caption{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+  .sizes{display:flex;align-items:flex-end;gap:34px;flex-wrap:wrap;padding:8px 4px 4px}
+  .sizes figure{margin:0;text-align:center}
+  .sizes img{display:block;image-rendering:auto;margin:0 auto 10px}
+  .sizes figcaption{font-size:12px;color:var(--muted)}
+  .swatches{display:flex;gap:14px;flex-wrap:wrap}
+  .sw{flex:1;min-width:150px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+  .sw i{display:block;height:76px}
+  .sw div{padding:10px 12px;font-size:12px}
+  .sw b{display:block;font-size:13px;margin-bottom:2px}
+  .sw span{color:var(--muted);font-variant-numeric:tabular-nums}
+  .social{border:1px solid var(--line);border-radius:12px;overflow:hidden;display:block;width:100%}
+  pre{background:#0D1117;color:#D7E2F2;border-radius:12px;padding:18px 20px;overflow-x:auto;
+      font-size:12.5px;line-height:1.65;margin:0 0 14px}
+  pre:last-child{margin-bottom:0}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .files{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px 20px;
+         font-size:13px;color:var(--muted)}
+  .files b{color:var(--ink);font-weight:600}
+  .note{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:36px}
+  a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="logo.svg" alt="Chatfolio" />
+    <span class="ver">Brand kit · v0.1.0</span>
+  </header>
+  <p class="lede">A chat bubble becoming a saved page: the bubble is the conversation, the stacked sheet
+    behind it is the <em>folio</em>, and the arrow is the export. Built on the extension's existing
+    <code>#1A73E8</code> accent. All source files are plain SVG — no build step, no external fonts.</p>
+
+  <section>
+    <h2>Primary mark &amp; lockups</h2>
+    <div class="row">
+      <div>
+        <div class="tile"><img class="hero" src="icon.svg" alt="Chatfolio icon" /></div>
+        <div class="caption">icon.svg — the app icon</div>
+      </div>
+      <div>
+        <div class="tile"><img class="mono" src="icon-mono.svg" alt="Monochrome mark" /></div>
+        <div class="caption">icon-mono.svg — single colour</div>
+      </div>
+    </div>
+    <div class="row" style="margin-top:22px">
+      <div>
+        <div class="tile"><img class="lockup" src="logo.svg" alt="Chatfolio light lockup" /></div>
+        <div class="caption">logo.svg — light background</div>
+      </div>
+      <div>
+        <div class="tile dark"><img class="lockup" src="logo-dark.svg" alt="Chatfolio dark lockup" /></div>
+        <div class="caption">logo-dark.svg — dark background</div>
+      </div>
+    </div>
+    <p class="note">The <code>i</code> carries a rounded-square dot that echoes the app tile.
+      Wordmark outlines are drawn from Lato Heavy (SIL Open Font License 1.1), converted to
+      paths so the SVG never depends on a locally installed font.</p>
+  </section>
+
+  <section>
+    <h2>Icon size ladder</h2>
+    <div class="sizes">
+      <figure><img src="icon-16.png" width="16" height="16" alt="16px" /><figcaption>16 · toolbar</figcaption></figure>
+      <figure><img src="icon-32.png" width="32" height="32" alt="32px" /><figcaption>32</figcaption></figure>
+      <figure><img src="icon-48.png" width="48" height="48" alt="48px" /><figcaption>48 · extensions page</figcaption></figure>
+      <figure><img src="icon-128.png" width="96" height="96" alt="128px" /><figcaption>128 · store</figcaption></figure>
+      <figure><img src="icon-256.png" width="128" height="128" alt="256px" /><figcaption>256</figcaption></figure>
+      <figure><img src="icon-512.png" width="150" height="150" alt="512px" /><figcaption>512</figcaption></figure>
+    </div>
+    <p class="note">16 / 32 px use a simplified glyph (no back sheet, 10% larger) so the arrow stays
+      legible in the browser toolbar.</p>
+  </section>
+
+  <section>
+    <h2>Colour</h2>
+    <div class="swatches">
+      <div class="sw"><i style="background:#1A73E8"></i><div><b>Primary</b><span>#1A73E8</span></div></div>
+      <div class="sw"><i style="background:#3D8BFF"></i><div><b>Gradient light</b><span>#3D8BFF</span></div></div>
+      <div class="sw"><i style="background:#0B4FC4"></i><div><b>Gradient deep</b><span>#0B4FC4</span></div></div>
+      <div class="sw"><i style="background:#12253E"></i><div><b>Ink</b><span>#12253E</span></div></div>
+      <div class="sw"><i style="background:#A9CEFF"></i><div><b>Folio sheet</b><span>#A9CEFF</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>GitHub social preview · 1280 × 640</h2>
+    <img class="social" src="social-preview.png" alt="Chatfolio social preview" />
+    <p class="note">Upload this in <em>Repo → Settings → Social preview</em>. It lists only sites with
+      working adapters; update the text and re-render when Claude ships.</p>
+  </section>
+
+  <section>
+    <h2>Use it</h2>
+    <pre><code>&lt;!-- README.md — auto-switches with GitHub's colour scheme --&gt;
+&lt;p align="center"&gt;
+  &lt;picture&gt;
+    &lt;source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.png"&gt;
+    &lt;img src="assets/logo.png" alt="Chatfolio" width="360"&gt;
+  &lt;/picture&gt;
+&lt;/p&gt;</code></pre>
+    <pre><code>// manifest.json
+"icons": {
+  "16":  "assets/icon-16.png",
+  "32":  "assets/icon-32.png",
+  "48":  "assets/icon-48.png",
+  "128": "assets/icon-128.png"
+}</code></pre>
+    <p class="note">PNG lockups (<code>logo.png</code> / <code>logo-dark.png</code>) are 2× renders for
+      README reliability; the SVGs remain the source of truth. <code>icon-mono.svg</code> uses
+      <code>currentColor</code> — set <code>color</code> in CSS or the SVG root to recolour it.</p>
+  </section>
+
+  <section>
+    <h2>Files</h2>
+    <div class="files">
+      <div><b>icon.svg</b> — primary app icon</div>
+      <div><b>icon-mono.svg</b> — single-colour mark</div>
+      <div><b>logo.svg</b> — light lockup</div>
+      <div><b>logo-dark.svg</b> — dark lockup</div>
+      <div><b>logo.png / logo-dark.png</b> — 2× README</div>
+      <div><b>icon-{16,32,48,128,256,512}.png</b></div>
+      <div><b>social-preview.svg / .png</b></div>
+      <div><b>preview.html</b> — this page</div>
+    </div>
+  </section>
+
+  <footer>Chatfolio · MV3 · zero build · <a href="../README.md">back to README</a></footer>
+</div>
+</body>
+</html>
