@@ -20,7 +20,8 @@
 
 ## 安装（Load unpacked）
 
-- `chrome://extensions` → 开发者模式 → 加载已解压的扩展程序 → 选择本目录
+- `chrome://extensions` → 开发者模式 → 加载已解压的扩展程序 → 选择 `extension/` 子目录
+  （不要加载仓库根目录：Chrome 会递归扫描加载目录，`.git`/tools 等不属于扩展）
 - 迭代：改完代码 → 扩展卡片上点「重新加载」→ 刷新目标网页
 
 ## 架构

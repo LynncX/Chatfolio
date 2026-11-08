@@ -12,7 +12,7 @@
 # 输出:   vendor/katex/katex-inline.css
 # 重跑时机: 升级 vendor/katex 里的 KaTeX 版本后
 set -euo pipefail
-cd "$(dirname "$0")/../vendor/katex"
+cd "$(dirname "$0")/../extension/vendor/katex"
 
 node -e '
 const fs = require("fs");

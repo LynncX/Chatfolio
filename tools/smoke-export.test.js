@@ -2,14 +2,14 @@
 // smoke-export.test.js — node 冒烟测试: export.js 的纯文本管线
 //   (LaTeX 风格转换 / 组件块处理 / 数学占位提取 / 文件名)
 // 不覆盖浏览器路径 (DOMParser/mdToHtml/KaTeX fetch)。
-// 用法: node tools/smoke-export.test.js   (在 Chatfolio/ 目录下)
+// 用法: node tools/smoke-export.test.js   (在仓库根目录下)
 'use strict';
 const assert = require('assert');
 
 global.window = {};
 global.chrome = { runtime: { getURL: (p) => p } };
-require('../content/core/namespace.js');
-require('../content/core/export.js');
+require('../extension/content/core/namespace.js');
+require('../extension/content/core/export.js');
 const CFOLIO = global.window.CFOLIO;
 
 // --- applyLatexStyle: obsidian ---
